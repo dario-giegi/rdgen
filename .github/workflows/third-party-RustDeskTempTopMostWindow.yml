@@ -10,7 +10,7 @@ on:
             description: 'Target'
             required: true
             type: string
-            default: 'windows-2022'
+            default: 'self-hosted'
         configuration:
             description: 'Configuration'
             required: true
@@ -25,7 +25,7 @@ on:
             description: 'TargetVersion'
             required: true
             type: string
-            default: 'Windows10'
+            default: 'Windows11'
 
 env:
   project_path: WindowInjection/WindowInjection.vcxproj
