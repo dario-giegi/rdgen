@@ -95,15 +95,15 @@ jobs:
       fail-fast: false
       matrix:
         job:
-          # - { target: i686-pc-windows-msvc        , os: windows-2022                  }
-          # - { target: x86_64-pc-windows-gnu       , os: windows-2022                  }
+          # - { target: i686-pc-windows-msvc        , os: self-hosted                  }
+          # - { target: x86_64-pc-windows-gnu       , os: self-hosted                  }
           - {
               target: i686-pc-windows-msvc,
-              os: windows-2022,
+              os: self-hosted,
               arch: x86,
               vcpkg-triplet: x86-windows-static,
             }
-          # - { target: aarch64-pc-windows-msvc, os: windows-2022 }
+          # - { target: aarch64-pc-windows-msvc, os: self-hosted }
     steps:
       - name: Export GitHub Actions cache environment variables
         uses: actions/github-script@v6
