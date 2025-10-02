@@ -165,7 +165,7 @@ jobs:
 
       - name: Install ImageMagick on Windows
         run: |
-          choco install -y imagemagick.app --no-progress
+          #choco install -y imagemagick.app --no-progress
           Get-ChildItem -Path "${env:ProgramFiles}" | % { $_.FullName } | Select-String -Pattern "[\/\\]ImageMagick[^\/\\]*$" | Out-File -Append -FilePath $env:GITHUB_PATH -Encoding utf8
 
       - name: fix flutter_gpu_texture_renderer (fixed in master rustdesk)
